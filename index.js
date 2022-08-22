@@ -9,11 +9,19 @@ let users = [
 ];
 
 function groupById(array) {
-  //write your code here
+  const newArray = array.reduce((accum, item) => {
+    const id = item.id; 
+
+    accum[id] = item;
+
+    return accum;
+  
+  },{});
+
+  console.log(newArray);
 }
 
 let usersById= groupById(users)
-console.log(usersById)
 
 /* expected output: 
 
